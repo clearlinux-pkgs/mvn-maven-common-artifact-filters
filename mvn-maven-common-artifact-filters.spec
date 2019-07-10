@@ -4,10 +4,12 @@
 #
 Name     : mvn-maven-common-artifact-filters
 Version  : 1.4
-Release  : 1
+Release  : 2
 URL      : https://repo1.maven.org/maven2/org/apache/maven/shared/maven-common-artifact-filters/1.4/maven-common-artifact-filters-1.4.jar
 Source0  : https://repo1.maven.org/maven2/org/apache/maven/shared/maven-common-artifact-filters/1.4/maven-common-artifact-filters-1.4.jar
 Source1  : https://repo1.maven.org/maven2/org/apache/maven/shared/maven-common-artifact-filters/1.4/maven-common-artifact-filters-1.4.pom
+Source2  : https://repo1.maven.org/maven2/org/apache/maven/shared/maven-common-artifact-filters/3.0.1/maven-common-artifact-filters-3.0.1.jar
+Source3  : https://repo1.maven.org/maven2/org/apache/maven/shared/maven-common-artifact-filters/3.0.1/maven-common-artifact-filters-3.0.1.pom
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : Apache-2.0
@@ -35,6 +37,12 @@ cp %{SOURCE0} %{buildroot}/usr/share/java/.m2/repository/org/apache/maven/shared
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/apache/maven/shared/maven-common-artifact-filters/1.4
 cp %{SOURCE1} %{buildroot}/usr/share/java/.m2/repository/org/apache/maven/shared/maven-common-artifact-filters/1.4
 
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/apache/maven/shared/maven-common-artifact-filters/3.0.1
+cp %{SOURCE2} %{buildroot}/usr/share/java/.m2/repository/org/apache/maven/shared/maven-common-artifact-filters/3.0.1
+
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/apache/maven/shared/maven-common-artifact-filters/3.0.1
+cp %{SOURCE3} %{buildroot}/usr/share/java/.m2/repository/org/apache/maven/shared/maven-common-artifact-filters/3.0.1
+
 
 %files
 %defattr(-,root,root,-)
@@ -43,3 +51,5 @@ cp %{SOURCE1} %{buildroot}/usr/share/java/.m2/repository/org/apache/maven/shared
 %defattr(-,root,root,-)
 /usr/share/java/.m2/repository/org/apache/maven/shared/maven-common-artifact-filters/1.4/maven-common-artifact-filters-1.4.jar
 /usr/share/java/.m2/repository/org/apache/maven/shared/maven-common-artifact-filters/1.4/maven-common-artifact-filters-1.4.pom
+/usr/share/java/.m2/repository/org/apache/maven/shared/maven-common-artifact-filters/3.0.1/maven-common-artifact-filters-3.0.1.jar
+/usr/share/java/.m2/repository/org/apache/maven/shared/maven-common-artifact-filters/3.0.1/maven-common-artifact-filters-3.0.1.pom
